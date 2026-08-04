@@ -1,0 +1,83 @@
+<!--
+   BPP#1
+   
+   Copyright 2026 Wiktor <Wiktor@DESKTOP-75RQ44F>
+   
+   This program is free software; you can redistribute it and/or modify
+   it under the terms of the GNU General Public License as published by
+   the Free Software Foundation; either version 2 of the License, or
+   (at your option) any later version.
+   
+   This program is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU General Public License for more details.
+   
+   You should have received a copy of the GNU General Public License
+   along with this program; if not, write to the Free Software
+   Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
+   MA 02110-1301, USA.
+   
+   
+-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+	<title>bez nazwy</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<meta name="generator" content="Geany 2.1" />
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	
+	<header>
+	<nav>
+		<a href="/index.html">Home</a>
+		<a href="/Blog.html">Blog</a>
+		<a href="/Portfolio.html">Portfolio</a>
+		<a href="/o mnie.html">o mnie</a>
+	</nav>
+	</header>
+	<section>
+	<article>
+<h2>Przegrana wojna z routerem dostawcy</h2>
+<p>Jak to jest przegrać wojnę z elektronicznym ustrojstwem chowającym się na strychu? </p>
+<p>Ciężko.</p>
+<p>Jednakże zawsze po ciężkiej porażce, kiedy już opuści nas nasza chęć rozbicia muru, następuje olśnienie w postaci możliwości spróbowania z innej, czasem łatwiejszej strony.</p>
+<p>Przez ostatnie dni pracowałem nad stworzeniem tak zwanego home-laba, czyli domowego laboratorium, ułatwiając sobie życie programisty przez możliwość ,chociażby posiadania dostępu do własnego serwera NAS z każdego miejsca na świecie.</p>
+<p>Motywatorem stało się też posiadania poligonu doświadczalnego do nauki administracji serwerem, oraz nauki o zabezpieczeniach, oraz ruchu sieciowym.</p>
+<p>Stając przed pierwszym wyzwaniem, jakim było odpalenie serwera NAS, ważny był dobór dobrego hardware'u. </p>
+<p>Z racji, że dysponowałem starym dyskiem z laptopa, przejściówką SATA3-USB oraz Raspberry Pi 4, uznałem, że to będzie najlepszy wybór.</p>
+<p>Aby nie bawić się w półśrodki, nie stawiałem go na debianowym Raspbianie, a na Rocky Linuxie, który jest oparty na dystrybucji Red Hat, która wręcz jest stworzona do takich rzeczy.</p>
+<p>Oczywiście nie obeszło się bez problemów, a nastąpiły one dość szybko.</p>
+<p>Port 22 (Łączność zdalna przez SSH) był jakkolwiek zabezpieczony i musiałem te zabezpieczenia jakoś obejść.</p>
+<p>Po wielogodzinnej batalii związanej z konfiguracją kluczy kryptograficznych, firewalla oraz innych mniejszych problemów, udało się.</p>
+<p>Przyszedł czas na krok drugi, czyli odpalenie VPN-a.</p>
+<p>Ponieważ jeszcze aż tak dobry w CyberSec nie jestem, nie odpalałem publicznego IP.</p>
+<p>Jednakże fajnie jest się móc połączyć z serwerem z dowolnego miejsca i coś poklikać chociażby z matcha-cafe.</p>
+<p>Sama konfiguracja WireGuarda przebiegła w miarę ok, problem pojawił się na przekierowywaniu sieci…</p>
+<p>Port był dobry, IP też, logowałem się z sieci zewnętrznej, ale coś ciągle nie dawało mi spokoju. </p>
+<p>Każdy wysłany pakiet nawet nie docierał do serwera i stwierdziłem, że musi być coś tu nie halo z przekierowaniem, ale nie na moim routerze, ale routerze dostawcy.</p>
+<p>Wspiąłem się na strych, podłączyłem się pod sieć (potem się zorientowałem, że mogłem użyć kabla wchodzącego do wejścia WAN od routera) oraz zdobyłem IP.</p>
+<p>Niestety dostawca odgórnie zablokował takie zachowania, aby żaden ciekawski jegomość nie próbował grzebać w ustawieniach bez wiedzy operatora. </p>
+<p>Stwierdziłem, że to nie ma sensu i nagle objawił mi się on…</p>
+<p>TAILSCALE</p>
+<p>Założyłem konto, zainstalowałem paczki, uwierzytelniłem urządzenia w swojej sieci i…</p>
+<p>BUM!</p>
+<p>Wszystko działa! </p>
+<p>Urządzenia się widzą, więc można przejść do etapu ostatniego.</p>
+<p>Konfiguracja Samby. </p>
+<p>Sam proces poszedł w miarę gładko, poza małymi trudnościami w konfiguracji firewalla udało się zalogować do katalogów z poziomu menedżera plików, co było dla mnie niesamowicie satysfakcjonujące.</p>
+<p>Niestety nie udało się odpalić serwera na Windowsie, ponieważ z niewiadomych przyczyn zapamiętał on dane wyłącznie jednego użytkownika i nie chciał ich zmienić mimo wpisywania na nowo danych logowania, ale to nie jest temat na ten moment dla mnie istotny, dlatego wrócę do tego w swoim czasie.</p>
+<p>Dziękuję za uwagę i zachęcam do napisania swoich przemyśleń z tym tematem, gdyż jest on niesamowicie ciekawy i chętnie się czegoś dowiem.</p>
+
+</article>
+	</section>
+	
+</body>
+
+</html>

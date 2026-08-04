@@ -1,0 +1,67 @@
+<!--
+   BPP#1
+   
+   Copyright 2026 Wiktor <Wiktor@DESKTOP-75RQ44F>
+   
+   This program is free software; you can redistribute it and/or modify
+   it under the terms of the GNU General Public License as published by
+   the Free Software Foundation; either version 2 of the License, or
+   (at your option) any later version.
+   
+   This program is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU General Public License for more details.
+   
+   You should have received a copy of the GNU General Public License
+   along with this program; if not, write to the Free Software
+   Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
+   MA 02110-1301, USA.
+   
+   
+-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+	<title>bez nazwy</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<meta name="generator" content="Geany 2.1" />
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	
+	<header>
+	<nav>
+		<a href="/index.html">Home</a>
+		<a href="/Blog.html">Blog</a>
+		<a href="/Portfolio.html">Portfolio</a>
+		<a href="/o mnie.html">o mnie</a>
+	</nav>
+	</header>
+	<section>
+	<article>
+<h2>Powrót do świat wbudowanego</h2>
+<p>Witajcie!</p>
+<p>Jakiś czas temu pisałem o moich problemach związanych z kompilacją pod mikrokontroler z serii STM32F103. </p>
+<p>Wspomniałem tam o kilku rzeczach, ale największą uwagę zwróciłem na skrypt linkera oraz plik startowy, jednakże nie był to jedyny problem.</p>
+<p>Okazało się, że moja płytka za 7 zł z Temu to nie to samo co Nucleo i nie bazuje ona na rdzeniu Cortex-M4, a na Cortex-M3, co diametralnie zmienia postać rzeczy. </p>
+<p>Dlatego właśnie, czytając manuale obu wersji rdzeni, odkryłem, że największą różnicą jest szyna komunikacyjna. </p>
+<p>Cortex-M4 korzysta z osobnych ścieżek, takich jak AHB1 oraz AHB2, natomiast Cortex-M3 posiada szynę komunikacyjną APB2, do której podłączone są porty GPIO oraz powiązany z nimi kontroler RCC. </p>
+<p>W implementacji architektury Cortex-M3 należy również uwzględnić sposób deklarowania wyjść GPIO. </p>
+<p>Okazuje się, że nie używamy w tym przypadku rejestru MODER do określenia sposobu działania naszego wyjścia, lecz rejestrów CRL/CRH.</p>
+<p>Zaraz po sukcesie związanym z zamigotaniem diody, przeszedłem do próby napisania własnych driverów.</p>
+<p>Dzięki takiemu rozwiązaniu mogę rozbudowywać projekt, dodając nowe pliki konfigurujące dodatkowe funkcje. </p>
+<p>Pierwszy z nich to oczywiście ten obsługujący porty GPIO, lecz w planach mam podział na sterowniki komunikacyjne obsługujące UART, I2C itp. oraz funkcyjne, które pozwolą mi obsłużyć chociażby konwersję ADC bądź generator stabilnego sygnału PWM.</p>
+<p>Cały kod źródłowy zamieszczam na GitHubie(też dopiero uczę się go używać dlatego będę wdzięczny za wsparcie.)</p>
+<p>Jeżeli podobają Wam się moje posty, będę bardzo wdzięczny za wyrażenie opinii, wskazówki bądź zaobserwowanie mnie. Z góry dziękuję, gdyż bardzo pomaga mi to rozwijać się oraz poznawać nowe obszary tego pięknego świata systemów wbudowanych.</p>
+
+</article>
+	</section>
+	
+</body>
+
+</html>
