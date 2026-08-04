@@ -1,0 +1,74 @@
+<!--
+   BPP#1
+   
+   Copyright 2026 Wiktor <Wiktor@DESKTOP-75RQ44F>
+   
+   This program is free software; you can redistribute it and/or modify
+   it under the terms of the GNU General Public License as published by
+   the Free Software Foundation; either version 2 of the License, or
+   (at your option) any later version.
+   
+   This program is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU General Public License for more details.
+   
+   You should have received a copy of the GNU General Public License
+   along with this program; if not, write to the Free Software
+   Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
+   MA 02110-1301, USA.
+   
+   
+-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+	<title>bez nazwy</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<meta name="generator" content="Geany 2.1" />
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	
+	<header>
+	<nav>
+		<a href="/index.html">Home</a>
+		<a href="/Blog.html">Blog</a>
+		<a href="/Portfolio.html">Portfolio</a>
+		<a href="/o mnie.html">o mnie</a>
+	</nav>
+	</header>
+	<section>
+	<article>
+<h2>BPP#1 Hello World</h2>
+<p>Pierwsze poważniejsze zmagania z 
+STM32 doprowadziły mnie do wniosku, że wiem, że nic nie wiem. 
+A co gorsza, nie do końca wiedziałem, gdzie szukać informacji, aby się czegoś dowiedzieć.</p>
+<p>Aby dokładniej opisać problem, opowiem, o co chodzi.</p>
+<p>Napisałem prosty program, który po kolei konfiguruje rejestry potrzebne do podania napięcia na porcie GPIOA5 (kod jest na GitHubie), tak aby uruchomić mikrokontrolerowe "Hello World", czyli miganie diodą.</p>
+<p>Niestety na tym skończyła się łatwa część. Proces kompilacji okazał się podobny, ale nie do końca tak samo płynny jak z użyciem AVRdude przy programowaniu Atmegi328p (tak, kupiłem podróbkę Arduino).</p>
+<p>Podczas kompilacji z użyciem Arm Embedded Toolchain, bez dopisania:</p>
+<p>--specs=nosys.specs</p>
+<p>Proces tworzenia pliku .elf nie ruszył. Prawdopodobnie linker potrzebował wsparcia w obsłudze funkcji systemowych, których na "gołym" procesorze przecież nie ma (I use Arch btw).</p>
+<p>Dalsze próby z użyciem arm-none-eabi-objcopy również nie poszły gładko, dlatego na tym zakończyłem swoje starania, by poszukać wiedzy u źródła i wrócić nieco mądrzejszy.</p>
+<p>Jeżeli znacie fora poświęcone tematyce programowania mikrokontrolerów w C, byłbym wdzięczny za linki. Muszę znaleźć punkt zaczepienia, aby wiedzieć, czego szukać chociażby na gcc.gnu.org. Niestety na Stack Overflow nie znalazłem zbyt wielu odpowiedzi na moje obecne rozterki.</p>
+<p>Ps.Następnym problemem będzie flashowanie dlatego jak ktoś ma informacje na temat konfiguracji wspomnianego toolchaina pod dany procesor i konwerter CH340 będę wdzięczny.</p>
+<p>Z góry dziękuje za polecajki!</p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+
+</article>
+	</section>
+	
+</body>
+
+</html>
