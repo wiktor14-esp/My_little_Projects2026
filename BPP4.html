@@ -44,9 +44,37 @@
 	</header>
 	<section>
 	<article>
-<h2>Google Chrome</h2>
-<p>Google Chrome is a web browser developed by Google, released in 2008. Chrome is the world's most popular web browser today!</p>
-<p>kskdkssdosodksodsokdoskdskdoskods</p>
+<h2>Przegrana wojna z routerem dostawcy</h2>
+<p>Jak to jest przegrać wojnę z elektronicznym ustrojstwem chowającym się na strychu? </p>
+<p>Ciężko.</p>
+<p>Jednakże zawsze po ciężkiej porażce, kiedy już opuści nas nasza chęć rozbicia muru, następuje olśnienie w postaci możliwości spróbowania z innej, czasem łatwiejszej strony.</p>
+<p>Przez ostatnie dni pracowałem nad stworzeniem tak zwanego home-laba, czyli domowego laboratorium, ułatwiając sobie życie programisty przez możliwość ,chociażby posiadania dostępu do własnego serwera NAS z każdego miejsca na świecie.</p>
+<p>Motywatorem stało się też posiadania poligonu doświadczalnego do nauki administracji serwerem, oraz nauki o zabezpieczeniach, oraz ruchu sieciowym.</p>
+<p>Stając przed pierwszym wyzwaniem, jakim było odpalenie serwera NAS, ważny był dobór dobrego hardware'u. </p>
+<p>Z racji, że dysponowałem starym dyskiem z laptopa, przejściówką SATA3-USB oraz Raspberry Pi 4, uznałem, że to będzie najlepszy wybór.</p>
+<p>Aby nie bawić się w półśrodki, nie stawiałem go na debianowym Raspbianie, a na Rocky Linuxie, który jest oparty na dystrybucji Red Hat, która wręcz jest stworzona do takich rzeczy.</p>
+<p>Oczywiście nie obeszło się bez problemów, a nastąpiły one dość szybko.</p>
+<p>Port 22 (Łączność zdalna przez SSH) był jakkolwiek zabezpieczony i musiałem te zabezpieczenia jakoś obejść.</p>
+<p>Po wielogodzinnej batalii związanej z konfiguracją kluczy kryptograficznych, firewalla oraz innych mniejszych problemów, udało się.</p>
+<p>Przyszedł czas na krok drugi, czyli odpalenie VPN-a.</p>
+<p>Ponieważ jeszcze aż tak dobry w CyberSec nie jestem, nie odpalałem publicznego IP.</p>
+<p>Jednakże fajnie jest się móc połączyć z serwerem z dowolnego miejsca i coś poklikać chociażby z matcha-cafe.</p>
+<p>Sama konfiguracja WireGuarda przebiegła w miarę ok, problem pojawił się na przekierowywaniu sieci…</p>
+<p>Port był dobry, IP też, logowałem się z sieci zewnętrznej, ale coś ciągle nie dawało mi spokoju. </p>
+<p>Każdy wysłany pakiet nawet nie docierał do serwera i stwierdziłem, że musi być coś tu nie halo z przekierowaniem, ale nie na moim routerze, ale routerze dostawcy.</p>
+<p>Wspiąłem się na strych, podłączyłem się pod sieć (potem się zorientowałem, że mogłem użyć kabla wchodzącego do wejścia WAN od routera) oraz zdobyłem IP.</p>
+<p>Niestety dostawca odgórnie zablokował takie zachowania, aby żaden ciekawski jegomość nie próbował grzebać w ustawieniach bez wiedzy operatora. </p>
+<p>Stwierdziłem, że to nie ma sensu i nagle objawił mi się on…</p>
+<p>TAILSCALE</p>
+<p>Założyłem konto, zainstalowałem paczki, uwierzytelniłem urządzenia w swojej sieci i…</p>
+<p>BUM!</p>
+<p>Wszystko działa! </p>
+<p>Urządzenia się widzą, więc można przejść do etapu ostatniego.</p>
+<p>Konfiguracja Samby. </p>
+<p>Sam proces poszedł w miarę gładko, poza małymi trudnościami w konfiguracji firewalla udało się zalogować do katalogów z poziomu menedżera plików, co było dla mnie niesamowicie satysfakcjonujące.</p>
+<p>Niestety nie udało się odpalić serwera na Windowsie, ponieważ z niewiadomych przyczyn zapamiętał on dane wyłącznie jednego użytkownika i nie chciał ich zmienić mimo wpisywania na nowo danych logowania, ale to nie jest temat na ten moment dla mnie istotny, dlatego wrócę do tego w swoim czasie.</p>
+<p>Dziękuję za uwagę i zachęcam do napisania swoich przemyśleń z tym tematem, gdyż jest on niesamowicie ciekawy i chętnie się czegoś dowiem.</p>
+
 </article>
 	</section>
 	

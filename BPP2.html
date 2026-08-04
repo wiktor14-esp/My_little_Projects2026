@@ -44,9 +44,22 @@
 	</header>
 	<section>
 	<article>
-<h2>Google Chrome</h2>
-<p>Google Chrome is a web browser developed by Google, released in 2008. Chrome is the world's most popular web browser today!</p>
-<p>kskdkssdosodksodsokdoskdskdoskods</p>
+<h2>Gdy zero staj e się nieskończonością</h2>
+<p>W ostatnim poście wspominałem o moich zmaganiach z kompilacją i plikiem binarnym.</p>
+<p>Co prawda utknąłem trochę, zgłębiając tajniki konfiguracji, pliku startowego oraz linkera, ale obiecuję – jak tylko zgłębię tę "tajemną wiedzę" i stworzę Makefile'a, który ułatwi mi życie, o wszystkim napiszę!</p>
+<p>Dzisiaj jednak przychodzę z nowinkami prosto z pracy, a mianowicie z "problemem nieskończoności".</p>
+<p>Aktualnie pracuję przy bateriach do wózków widłowych. Obsługuję infrastrukturę pomiaru napięcia, temperatury oraz poziomu cieczy. </p>
+<p>Nasi klienci nie zawsze mają kontrolery podpięte do sieci, więc raz na jakiś czas musimy zgrać dane ręcznie, aby mieć wgląd w historię używania danej baterii.</p>
+<p>Ostatnio podczas importu niektóre pliki z niewiadomego powodu nie chciały przejść. </p>
+<p>Okazało się, że podczas zapisu w niektórych miejscach program zamiast "0" podał liczbę tak wielką, że ostatecznie zinterpretował ją jako nieskończoność i wpisał w plik tekstowy "inf".</p>
+<p>Program zbierający te dane  widząc "inf" zamiast liczby, uznawał to za błąd typu zmiennej i wyrzucał cały plik do kosza.</p>
+<p>Udało mi się już uratować te pliki CSV, jednak zastanawia mnie, co stoi za tą niewinną, a jednak destrukcyjną usterką w kodzie ESP8266.</p>
+<p>ak tylko znajdę chwilę, wezmę na warsztat program tego kontrolera i sprawdzę, gdzie leży błąd.</p>
+<p>Macie jakieś pomysły, co może powodować takie "matematyczne anomalie"?</p>
+<p>Dajcie znać w komentarzu!</p>
+<p>Osobiście obstawiam dzielenie przez zero spowodowane przerwaniem w odczycie wartości porównawczej bądź zakłócenie spowodowane wysokimi prądami podczas pracy owej baterii.</p>
+<p>Jeżeli macie inne pomysły będę wdzięczny za każdą podpowiedź!</p>
+
 </article>
 	</section>
 	
